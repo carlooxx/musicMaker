@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+header {
+  height: 10vh;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  background-color: aqua;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  cursor: pointer;
+}
+.kick-pad {
+  background: rgb(30, 126, 150);
+}
+.snare-pad {
+  background: rgb(68, 165, 125);
+}
+.hihat-pad {
+  background: rgb(68, 61, 168);
+}
+.kick-pad.active {
+  background: rgb(21, 190, 233);
+}
+.snare-pad.active {
+  background: rgb(87, 209, 158);
+}
+.hihat-pad.active {
+  background: rgb(91, 80, 231);
+}
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  width: 70%;
+  justify-content: space-between;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.controls button {
+  padding: 15px 15px;
+  color: black;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.muteclass {
+  background-color: chocolate;
+}
+#kick-select {
+  padding: 0px 5px;
+}
+.play {
+  padding: 15px 40px;
+  font-size: 20px;
+  background-color: rgb(202, 218, 221);
+  border: none;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  margin-top: 50px;
+  border: 1px solid white;
+}
+.play:hover {
+  color: white;
+  background-color: black;
+}
+.anime {
+  animation: padJump 0.5s alternate ease-in-out 2;
+}
+.tempo {
+  margin: 30px;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 1px;
+  -webkit-appearance: none;
+  margin: 10px 0px;
+  width: 100%;
+  position: relative;
+  background-color: rgb(88, 88, 88);
+  outline: none;
+  cursor: pointer;
+}
+.tempo p {
+  font-size: 25px;
+  text-align: center;
+}
+@keyframes padJump {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
